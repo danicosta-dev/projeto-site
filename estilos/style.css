@@ -5,10 +5,22 @@
 body {
     background-color: rgb(199, 150, 245);
 }
+
+img.lado {
+    float: right;
+}
+
+
+
 main {
-    background-color: antiquewhite;
+    background-color: #faebd7;
     width: 500px; 
+    height: 600px;
     margin: auto; 
     padding: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
+}
+
+h1{
+
 }
