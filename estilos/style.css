@@ -1,26 +1,80 @@
-*{
+/* Estilo padrão */
+* {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
+
 body {
     background-color: rgb(199, 150, 245);
+    margin: 0;
+    padding: 0;
 }
 
 img.lado {
     float: right;
+    max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do contêiner */
+    height: auto;
 }
 
-
+img.banner {
+    max-width: 100%; /* Garante que o banner se ajuste automaticamente */
+    height: auto;
+}
 
 main {
     background-color: #faebd7;
-    width: 500px; 
-    height: 600px;
-    margin: auto; 
+    width: 80%; /* A largura agora é 80% da tela */
+    max-width: 500px; /* A largura máxima ainda é 500px para não ficar maior que isso */
+    height: auto; /* Deixo a altura automática para que ela ajuste conforme o conteúdo */
+    margin: 20px auto; /* Centraliza o conteúdo com uma margem de 20px */
     padding: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
 }
 
-h1{
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
+    main {
+        width: 90%; /* Para dispositivos menores, o main ocupa 90% da tela */
+    }
 
+    h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título em telas menores */
+    }
+
+    h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte do subtítulo */
+    }
+
+    img.lado {
+        max-width: 80%; /* Limita a largura da imagem para não ultrapassar o conteúdo */
+        margin-top: 10px; /* Adiciona um pequeno espaço superior quando a imagem flui para baixo */
+    }
+
+    img.banner {
+        max-width: 100%; /* A largura do banner também será 100% */
+    }
+}
+
+/* Ajustes para dispositivos muito pequenos (ex: celulares) */
+@media (max-width: 480px) {
+    main {
+        width: 95%; /* Para telas muito pequenas, o main ocupa 95% da tela */
+    }
+
+    h1 {
+        font-size: 20px; /* Menor tamanho de fonte para telas pequenas */
+    }
+
+    h2 {
+        font-size: 18px; /* Ajusta o tamanho dos subtítulos para telas pequenas */
+    }
+
+    img.lado {
+        max-width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+        margin-top: 10px;
+    }
+
+    img.banner {
+        max-width: 100%; /* Garante que o banner ocupe toda a largura da tela */
+    }
 }
